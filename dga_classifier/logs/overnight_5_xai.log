@@ -1,0 +1,9 @@
+explaining 500 names (200 DGA, 200 legit, 100 Athena) from full/split.json
+  n-CBDC: done in 30s
+  MaldomDetector: done in 53s
+  ATT-CNN-BiLSTM: done in 28s
+  NGram-KL-Jaccard: done in 58s
+  LA-LSTM-Attention: done in 18s
+  Integrated-DL: done in 28s
+  HDDN: done in 39s
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\xai\out\XAI_report.md in 262s

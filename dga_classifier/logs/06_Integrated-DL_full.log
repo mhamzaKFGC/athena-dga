@@ -1,0 +1,13 @@
+FULL mode: 50 families, 12000 per family per epoch (+ same number of legit), 4 epochs
+train: 1000000 labels (500000 DGA, 500000 legit)
+val: 50000 labels (25000 DGA, 25000 legit)
+test: 200000 labels (100000 DGA, 100000 legit)
+C:\Users\WAQAR COMPUTER\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:380: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\Convolution.cpp:1136.)
+  return F.conv1d(
+  epoch 1: val loss 0.2136  (1453s)
+  epoch 2: val loss 0.1924  (2677s)
+  epoch 3: val loss 0.1554  (3827s)
+  epoch 4: val loss 0.1403  (4984s)
+
+[Integrated-DL] test acc 0.9509  F1 0.9507  AUC 0.9882  FPR 0.0437  | charbot 0.611  word-concat 0.297
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\06_Integrated-DL\results.json

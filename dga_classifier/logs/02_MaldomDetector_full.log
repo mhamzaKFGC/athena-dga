@@ -1,0 +1,8 @@
+FULL mode: 50 families, 12000 per family per epoch (+ same number of legit), 4 epochs
+train: 1000000 labels (500000 DGA, 500000 legit)
+val: 50000 labels (25000 DGA, 25000 legit)
+test: 200000 labels (100000 DGA, 100000 legit)
+features for 500000 training rows in 13s
+
+[MaldomDetector] test acc 0.8083  F1 0.7878  AUC 0.8894  FPR 0.0947  | charbot 0.239  word-concat 0.213
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\02_MaldomDetector\results.json

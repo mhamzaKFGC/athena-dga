@@ -1,0 +1,82 @@
+[
+  {
+    "model": "n-CBDC",
+    "quick": false,
+    "cb_evasion": 0.7859,
+    "ath_evasion": 0.99,
+    "cb_detected": 0.2141,
+    "ath_detected": 0.01,
+    "cb_mean": 0.235751701145537,
+    "ath_mean": 0.023919
+  },
+  {
+    "model": "MaldomDetector",
+    "quick": false,
+    "cb_evasion": 0.7373,
+    "ath_evasion": 0.9568285714285715,
+    "cb_detected": 0.2627,
+    "ath_detected": 0.04317142857142857,
+    "cb_mean": 0.3301238516334101,
+    "ath_mean": 0.2503256457142857
+  },
+  {
+    "model": "ATT-CNN-BiLSTM",
+    "quick": false,
+    "cb_evasion": 0.7988666666666666,
+    "ath_evasion": 0.9908285714285714,
+    "cb_detected": 0.20113333333333333,
+    "ath_detected": 0.009171428571428572,
+    "cb_mean": 0.227897329063138,
+    "ath_mean": 0.02698782
+  },
+  {
+    "model": "NGram-KL-Jaccard",
+    "quick": false,
+    "cb_evasion": 0.7361333333333333,
+    "ath_evasion": 0.9834571428571428,
+    "cb_detected": 0.2638666666666667,
+    "ath_detected": 0.016542857142857144,
+    "cb_mean": 0.3162528013780832,
+    "ath_mean": 0.09676830571428571
+  },
+  {
+    "model": "LA-LSTM-Attention",
+    "quick": false,
+    "cb_evasion": 0.7728,
+    "ath_evasion": 0.9887428571428571,
+    "cb_detected": 0.2272,
+    "ath_detected": 0.011257142857142858,
+    "cb_mean": 0.2547222400447449,
+    "ath_mean": 0.03560376285714286
+  },
+  {
+    "model": "Integrated-DL",
+    "quick": false,
+    "cb_evasion": 0.3668,
+    "ath_evasion": 0.9873714285714286,
+    "cb_detected": 0.6332,
+    "ath_detected": 0.012628571428571428,
+    "cb_mean": 0.6269180421553727,
+    "ath_mean": 0.05310096857142857
+  },
+  {
+    "model": "HDDN",
+    "quick": true,
+    "cb_evasion": 0.7425,
+    "ath_evasion": 0.9757142857142858,
+    "cb_detected": 0.2575,
+    "ath_detected": 0.024285714285714285,
+    "cb_mean": 0.3850802891641855,
+    "ath_mean": 0.21314473714285714
+  },
+  {
+    "model": "Majority vote",
+    "quick": false,
+    "cb_evasion": 0.7824666666666666,
+    "ath_evasion": 0.9972285714285715,
+    "cb_detected": 0.21753333333333333,
+    "ath_detected": 0.0027714285714285714,
+    "cb_mean": NaN,
+    "ath_mean": NaN
+  }
+]

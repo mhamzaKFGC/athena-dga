@@ -1,0 +1,18 @@
+﻿unique labels 9256 | train 7406 val 925 test 925
+[v1] trained 31.5s | best val 2.359
+[v2] trained 60.0s | best val 2.412
+
+=== RESULTS (same split, same seeds) ===
+metric                          v1          v2
+params                   29799.000   79527.000
+train_s                     31.538      59.957
+gen_s                        0.440       1.304
+test_loss                    2.352       2.402
+valid                       96.800      96.600
+unique_valid                94.300      96.300
+novel                       92.100      94.300
+wordlike                    75.200      77.100
+lookalike_of_known          21.100       9.800
+usable                      56.800      69.400
+v1 samples: ['tapars', 'takic', 'post', 'askank', 'mertic', 'digital', 'gltch', 'nepoto']
+v2 samples: ['tapdbar', 'takelank', 'poskur', 'askank', 'mervert', 'dightrang', 'gltshonder', 'nepads']

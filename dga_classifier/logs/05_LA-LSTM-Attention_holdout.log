@@ -1,0 +1,15 @@
+held-out families (never trained on): suppobox_1, matsnu, gozi_nasa, nymaim, necurs, dyre, ramnit, locky, pykspa, banjori
+train: 144000 labels (64000 DGA, 80000 legit)
+val: 18000 labels (8000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+
+== LA_Bin07 (binary)
+  epoch 1: val loss 0.2399  (84s)
+  epoch 2: val loss 0.1925  (164s)
+  epoch 3: val loss 0.1737  (250s)
+  epoch 4: val loss 0.1524  (347s)
+  epoch 5: val loss 0.1486  (428s)
+  epoch 6: val loss 0.1458  (507s)
+
+[LA-LSTM-Attention] test acc 0.9156  F1 0.9111  AUC 0.9540  FPR 0.0342  | charbot 0.199  word-concat 0.315
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\05_LA-LSTM-Attention\results_holdout.json

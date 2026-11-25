@@ -1,0 +1,23 @@
+train: 160000 labels (80000 DGA, 80000 legit)
+val: 20000 labels (10000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+
+== LA_Bin07 (binary)
+  epoch 1: val loss 0.2682  (114s)
+  epoch 2: val loss 0.2444  (213s)
+  epoch 3: val loss 0.1987  (318s)
+  epoch 4: val loss 0.1848  (429s)
+  epoch 5: val loss 0.1736  (561s)
+  epoch 6: val loss 0.1700  (685s)
+
+[LA-LSTM-Attention] test acc 0.9307  F1 0.9295  AUC 0.9819  FPR 0.0509  | charbot 0.252  word-concat 0.361
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\05_LA-LSTM-Attention\results.json
+
+== LA_Mul07 (legit + each DGA family)
+  epoch 1: val loss 1.0053  (154s)
+  epoch 2: val loss 0.8482  (255s)
+  epoch 3: val loss 0.7791  (386s)
+  epoch 4: val loss 0.7392  (512s)
+  epoch 5: val loss 0.7035  (631s)
+  epoch 6: val loss 0.6720  (748s)
+[LA_Mul07] accuracy 0.7833  macro-F1 0.5946

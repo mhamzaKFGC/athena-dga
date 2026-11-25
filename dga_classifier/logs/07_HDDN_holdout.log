@@ -1,0 +1,12 @@
+held-out families (never trained on): suppobox_1, matsnu, gozi_nasa, nymaim, necurs, dyre, ramnit, locky, pykspa, banjori
+train: 144000 labels (64000 DGA, 80000 legit)
+val: 18000 labels (8000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+  epoch 1: val loss 0.1608  (113s)
+  epoch 2: val loss 0.1328  (221s)
+  epoch 3: val loss 0.1430  (346s)
+  epoch 4: val loss 0.1357  (472s)
+  early stop
+
+[HDDN] test acc 0.9224  F1 0.9195  AUC 0.9592  FPR 0.0411  | charbot 0.255  word-concat 0.369
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\07_HDDN\results_holdout.json

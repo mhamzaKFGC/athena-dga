@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="900" height="700" fill="#ffffff"/>
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="600" fill="#0f172a">Athena: how the character-graph generator works</text>
+
+  <!-- Row 1: data pipeline -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="30" y="64" width="150" height="62" rx="8" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="105" y="90" font-weight="600" fill="#0c4a6e">1. Input labels</text>
+    <text x="105" y="108" fill="#0c4a6e">abc.com → abc</text>
+
+    <rect x="225" y="64" width="150" height="62" rx="8" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="300" y="90" font-weight="600" fill="#0c4a6e">2. Clean + split</text>
+    <text x="300" y="108" fill="#0c4a6e">train / val / test</text>
+
+    <rect x="420" y="64" width="150" height="62" rx="8" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="495" y="90" font-weight="600" fill="#0c4a6e">3. Tokens</text>
+    <text x="495" y="108" fill="#0c4a6e">^ a b c … $ (ids)</text>
+
+    <rect x="615" y="64" width="255" height="62" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="742" y="90" font-weight="600" fill="#0f172a">Targets = next token</text>
+    <text x="742" y="108" fill="#334155">input ^abc → target abc$</text>
+  </g>
+  <path d="M180 95H225M375 95H420M570 95H615" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+
+  <!-- GNN block -->
+  <rect x="30" y="160" width="840" height="330" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="50" y="186" font-size="15" font-weight="600" fill="#0f172a">4. The GNN (one node per character position, edge from previous position)</text>
+
+  <g font-size="13" text-anchor="middle">
+    <!-- token row -->
+    <text x="70" y="226" font-size="12" fill="#475569" text-anchor="start">tokens</text>
+    <g fill="#fef3c7" stroke="#d97706">
+      <rect x="180" y="206" width="70" height="32" rx="6"/>
+      <rect x="320" y="206" width="70" height="32" rx="6"/>
+      <rect x="460" y="206" width="70" height="32" rx="6"/>
+      <rect x="600" y="206" width="70" height="32" rx="6"/>
+      <rect x="740" y="206" width="70" height="32" rx="6"/>
+    </g>
+    <g fill="#78350f" font-weight="600">
+      <text x="215" y="227">^</text><text x="355" y="227">a</text><text x="495" y="227">b</text><text x="635" y="227">c</text><text x="775" y="227">d</text>
+    </g>
+
+    <!-- embedding -->
+    <text x="70" y="290" font-size="12" fill="#475569" text-anchor="start">embedding</text>
+    <g fill="#dcfce7" stroke="#16a34a">
+      <rect x="180" y="270" width="70" height="32" rx="16"/>
+      <rect x="320" y="270" width="70" height="32" rx="16"/>
+      <rect x="460" y="270" width="70" height="32" rx="16"/>
+      <rect x="600" y="270" width="70" height="32" rx="16"/>
+      <rect x="740" y="270" width="70" height="32" rx="16"/>
+    </g>
+    <g fill="#14532d"><text x="215" y="291">h₀</text><text x="355" y="291">h₁</text><text x="495" y="291">h₂</text><text x="635" y="291">h₃</text><text x="775" y="291">h₄</text></g>
+    <path d="M215 238V270M355 238V270M495 238V270M635 238V270M775 238V270" stroke="#475569" stroke-width="1.5" marker-end="url(#a)"/>
+
+    <!-- layers -->
+    <text x="70" y="354" font-size="12" fill="#475569" text-anchor="start">layer 1</text>
+    <text x="70" y="418" font-size="12" fill="#475569" text-anchor="start">layers 2, 3</text>
+    <g fill="#ede9fe" stroke="#7c3aed">
+      <rect x="180" y="334" width="70" height="32" rx="16"/><rect x="320" y="334" width="70" height="32" rx="16"/><rect x="460" y="334" width="70" height="32" rx="16"/><rect x="600" y="334" width="70" height="32" rx="16"/><rect x="740" y="334" width="70" height="32" rx="16"/>
+      <rect x="180" y="398" width="70" height="32" rx="16"/><rect x="320" y="398" width="70" height="32" rx="16"/><rect x="460" y="398" width="70" height="32" rx="16"/><rect x="600" y="398" width="70" height="32" rx="16"/><rect x="740" y="398" width="70" height="32" rx="16"/>
+    </g>
+    <g fill="#4c1d95"><text x="215" y="355">tanh</text><text x="355" y="355">tanh</text><text x="495" y="355">tanh</text><text x="635" y="355">tanh</text><text x="775" y="355">tanh</text>
+      <text x="215" y="419">tanh</text><text x="355" y="419">tanh</text><text x="495" y="419">tanh</text><text x="635" y="419">tanh</text><text x="775" y="419">tanh</text></g>
+    <!-- vertical + diagonal (message from previous) edges -->
+    <g stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M215 302V334M355 302V334M495 302V334M635 302V334M775 302V334"/>
+      <path d="M215 366V398M355 366V398M495 366V398M635 366V398M775 366V398"/>
+    </g>
+    <g stroke="#7c3aed" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M250 286L320 340M390 286L460 340M530 286L600 340M670 286L740 340"/>
+      <path d="M250 350L320 404M390 350L460 404M530 350L600 404M670 350L740 404"/>
+    </g>
+    <text x="450" y="458" fill="#6d28d9" font-size="12">purple arrows = message from the previous position; every node concatenates [own, previous] and passes it through Linear + tanh</text>
+    <text x="450" y="476" fill="#475569" font-size="12">3 layers → the last node can see the 4 most recent positions (n_layers + 1)</text>
+  </g>
+
+  <!-- Readout / training -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="30" y="520" width="270" height="70" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="165" y="546" font-weight="600" fill="#7f1d1d">5. Readout + loss</text>
+    <text x="165" y="566" fill="#7f1d1d">Linear → scores for the next char</text>
+    <text x="165" y="582" fill="#7f1d1d">cross-entropy; keep best val epoch</text>
+
+    <rect x="345" y="520" width="270" height="70" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="480" y="546" font-weight="600" fill="#7f1d1d">6. Generate</text>
+    <text x="480" y="566" fill="#7f1d1d">start from prefix "abc", extend 1 char</text>
+    <text x="480" y="582" fill="#7f1d1d">top-k + temperature sampling</text>
+
+    <rect x="660" y="520" width="210" height="70" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="765" y="546" font-weight="600" fill="#14532d">7. Filter + save</text>
+    <text x="765" y="566" fill="#14532d">not in input, no duplicates</text>
+    <text x="765" y="582" fill="#14532d">name.test → CSV</text>
+  </g>
+  <path d="M300 555H345M615 555H660" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+  <path d="M450 490V505H165V520" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+
+  <!-- loop note -->
+  <path d="M480 520V500H300" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4" fill="none"/>
+  <text x="450" y="630" text-anchor="middle" font-size="12" fill="#475569">Generation loop: predicted char is appended to the label, the last (n_layers + 1) tokens go back into the GNN, until the stop token or the length limit.</text>
+  <text x="450" y="652" text-anchor="middle" font-size="12" fill="#475569">Only the toy words are learned unless input_file points at real labels.</text>
+</svg>

@@ -1,0 +1,14 @@
+
+2026-11-24 15:13:36  START 1_full_training
+2026-11-24 22:11:07  END   1_full_training (exit 0)
+2026-11-24 22:11:07  START 2_holdout_training
+2026-11-24 23:02:31  END   2_holdout_training (exit 0)
+2026-11-24 23:02:31  START 3_holdout_report
+2026-11-24 23:02:34  END   3_holdout_report (exit 0)
+2026-11-24 23:02:34  START 4_athena_pipeline
+2026-11-24 23:02:47  END   4_athena_pipeline (exit 0)
+2026-11-24 23:02:47  START 5_xai
+2026-11-24 23:07:18  END   5_xai (exit 0)
+2026-11-24 23:07:18  START 6_final_report
+2026-11-24 23:07:18  END   6_final_report (exit 0)
+2026-11-24 23:07:18  ALL DONE

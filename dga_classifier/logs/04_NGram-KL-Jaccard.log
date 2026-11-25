@@ -1,0 +1,6 @@
+train: 160000 labels (80000 DGA, 80000 legit)
+val: 20000 labels (10000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+
+[NGram-KL-Jaccard] test acc 0.9073  F1 0.9049  AUC 0.9674  FPR 0.0677  | charbot 0.261  word-concat 0.344
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\04_NGram-KL-Jaccard\results.json

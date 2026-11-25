@@ -1,0 +1,25 @@
+generated 100 Athena names from 100 legit candidates in 2s
+# Athena vs DGA classifiers
+
+Run: 2026-11-24 23:02 · seed 2026 · 100 candidate pairs · 7 classifiers
+
+## What was done
+1. Picked 100 random legit domains from the classifiers' **held-out test split** (never seen in training).
+2. Gave each to **Athena** as its candidate: the first 3 characters became the prefix, and Athena generated one new name (≤ 12 chars, temperature 0.8, top-k 8; rejects known names and one-edit lookalikes of the 200k Majestic list).
+3. Scored both sets with every saved classifier (no retraining). A score ≥ 0.5 means "DGA".
+
+## Results
+
+| Model | Real legit flagged as DGA (false positives) | Athena flagged as DGA | Athena evasion rate | Mean score: legit | Mean score: Athena | Median score: Athena |
+|---|---|---|---|---|---|---|
+| n-CBDC | 3% | 0% | **100%** | 0.054 | 0.018 | 0.001 |
+| MaldomDetector | 9% | 3% | **97%** | 0.273 | 0.239 | 0.256 |
+| ATT-CNN-BiLSTM | 4% | 1% | **99%** | 0.069 | 0.026 | 0.004 |
+| NGram-KL-Jaccard | 10% | 1% | **99%** | 0.170 | 0.104 | 0.063 |
+| LA-LSTM-Attention | 3% | 0% | **100%** | 0.073 | 0.027 | 0.009 |
+| Integrated-DL | 5% | 1% | **99%** | 0.139 | 0.059 | 0.022 |
+| HDDN | 4% | 0% | **100%** | 0.054 | 0.007 | 0.002 |
+| Majority vote | 2% | 0% | **100%** | - | - | - |
+
+
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\pipeline\out\results.md, scores.csv, chart_flag_rate.png, chart_score_distribution.png

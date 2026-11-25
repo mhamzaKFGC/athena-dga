@@ -1,0 +1,13 @@
+train: 160000 labels (80000 DGA, 80000 legit)
+val: 20000 labels (10000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+C:\Users\WAQAR COMPUTER\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:380: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\Convolution.cpp:1136.)
+  return F.conv1d(
+  epoch 1: val loss 0.1951  (122s)
+  epoch 2: val loss 0.1748  (236s)
+  epoch 3: val loss 0.1873  (358s)
+  epoch 4: val loss 0.1851  (492s)
+  early stop
+
+[n-CBDC] test acc 0.9312  F1 0.9309  AUC 0.9813  FPR 0.0640  | charbot 0.298  word-concat 0.392
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\01_n-CBDC\results.json

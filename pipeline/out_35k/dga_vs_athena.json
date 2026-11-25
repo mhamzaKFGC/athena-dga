@@ -1,0 +1,621 @@
+{
+  "summary": [
+    {
+      "model": "n-CBDC",
+      "quick": false,
+      "dga_evasion": 0.052942857142857146,
+      "athena_evasion": 0.99,
+      "dga_mean": 0.9352714656448518,
+      "athena_mean": 0.023919
+    },
+    {
+      "model": "MaldomDetector",
+      "quick": false,
+      "dga_evasion": 0.288,
+      "athena_evasion": 0.9568285714285715,
+      "dga_mean": 0.7436376276530742,
+      "athena_mean": 0.2503256457142857
+    },
+    {
+      "model": "ATT-CNN-BiLSTM",
+      "quick": false,
+      "dga_evasion": 0.04997142857142857,
+      "athena_evasion": 0.9908285714285714,
+      "dga_mean": 0.9324454741546419,
+      "athena_mean": 0.02698782
+    },
+    {
+      "model": "NGram-KL-Jaccard",
+      "quick": false,
+      "dga_evasion": 0.12842857142857142,
+      "athena_evasion": 0.9834571428571428,
+      "dga_mean": 0.8546318345180256,
+      "athena_mean": 0.09676830571428571
+    },
+    {
+      "model": "LA-LSTM-Attention",
+      "quick": false,
+      "dga_evasion": 0.0456,
+      "athena_evasion": 0.9887428571428571,
+      "dga_mean": 0.9352721533490211,
+      "athena_mean": 0.03560376285714286
+    },
+    {
+      "model": "Integrated-DL",
+      "quick": false,
+      "dga_evasion": 0.0534,
+      "athena_evasion": 0.9873714285714286,
+      "dga_mean": 0.9318966280007602,
+      "athena_mean": 0.05310096857142857
+    },
+    {
+      "model": "HDDN",
+      "quick": true,
+      "dga_evasion": 0.28794285714285717,
+      "athena_evasion": 0.9757142857142858,
+      "dga_mean": 0.6994235770512904,
+      "athena_mean": 0.21314473714285714
+    },
+    {
+      "model": "Majority vote",
+      "quick": false,
+      "dga_evasion": 0.06477142857142859,
+      "athena_evasion": 0.9972285714285715,
+      "dga_mean": null,
+      "athena_mean": null
+    }
+  ],
+  "detection_validation": [
+    {
+      "model": "n-CBDC",
+      "quick": false,
+      "det_dga": 0.9470571428571428,
+      "det_athena": 0.01,
+      "fpr_legit": 0.03194285714285714,
+      "auc_dga_vs_legit": 0.9918240857142856,
+      "auc_athena_vs_legit": 0.4207293502040816,
+      "full_recall": 0.94692,
+      "full_precision": 0.9677261113949923,
+      "full_f1": 0.9572100075815012,
+      "full_auc": 0.9918650563,
+      "full_fpr": 0.03158
+    },
+    {
+      "model": "MaldomDetector",
+      "quick": false,
+      "det_dga": 0.712,
+      "det_athena": 0.04317142857142857,
+      "fpr_legit": 0.0958,
+      "auc_dga_vs_legit": 0.888821551020408,
+      "auc_athena_vs_legit": 0.5016087465306123,
+      "full_recall": 0.71138,
+      "full_precision": 0.8824959682421536,
+      "full_f1": 0.7877526161342118,
+      "full_auc": 0.8894062258500002,
+      "full_fpr": 0.09472
+    },
+    {
+      "model": "ATT-CNN-BiLSTM",
+      "quick": false,
+      "det_dga": 0.9500285714285714,
+      "det_athena": 0.009171428571428572,
+      "fpr_legit": 0.03508571428571428,
+      "auc_dga_vs_legit": 0.9915168220408164,
+      "auc_athena_vs_legit": 0.41833075551020404,
+      "full_recall": 0.94903,
+      "full_precision": 0.9639226042354375,
+      "full_f1": 0.9564183316117004,
+      "full_auc": 0.9914171882999999,
+      "full_fpr": 0.03552
+    },
+    {
+      "model": "NGram-KL-Jaccard",
+      "quick": false,
+      "det_dga": 0.8715714285714286,
+      "det_athena": 0.016542857142857144,
+      "fpr_legit": 0.06465714285714286,
+      "auc_dga_vs_legit": 0.9650430367346939,
+      "auc_athena_vs_legit": 0.43956219999999996,
+      "full_recall": 0.87015,
+      "full_precision": 0.9325866780987085,
+      "full_f1": 0.9002871110421354,
+      "full_auc": 0.96522109745,
+      "full_fpr": 0.0629
+    },
+    {
+      "model": "LA-LSTM-Attention",
+      "quick": false,
+      "det_dga": 0.9544,
+      "det_athena": 0.011257142857142858,
+      "fpr_legit": 0.04842857142857143,
+      "auc_dga_vs_legit": 0.9900483991836735,
+      "auc_athena_vs_legit": 0.4117161869387756,
+      "full_recall": 0.95184,
+      "full_precision": 0.9521923111551274,
+      "full_f1": 0.9520161229827518,
+      "full_auc": 0.9899593722000001,
+      "full_fpr": 0.04779
+    },
+    {
+      "model": "Integrated-DL",
+      "quick": false,
+      "det_dga": 0.9466,
+      "det_athena": 0.012628571428571428,
+      "fpr_legit": 0.04505714285714286,
+      "auc_dga_vs_legit": 0.9883201906122449,
+      "auc_athena_vs_legit": 0.3476088853061225,
+      "full_recall": 0.94558,
+      "full_precision": 0.9557878138519387,
+      "full_f1": 0.950656505740655,
+      "full_auc": 0.98824373785,
+      "full_fpr": 0.04374
+    },
+    {
+      "model": "HDDN",
+      "quick": true,
+      "det_dga": 0.7120571428571428,
+      "det_athena": 0.024285714285714285,
+      "fpr_legit": 0.09577142857142858,
+      "auc_dga_vs_legit": 0.8865852114285715,
+      "auc_athena_vs_legit": 0.3455917048979592,
+      "full_recall": 0.7004701141705842,
+      "full_precision": 0.8764705882352941,
+      "full_f1": 0.7786487495334079,
+      "full_auc": 0.8858462499538864,
+      "full_fpr": 0.09728656518861681
+    }
+  ],
+  "family_evasion": {
+    "alureon": {
+      "n-CBDC": 0.022857142857142857,
+      "MaldomDetector": 0.13285714285714287,
+      "ATT-CNN-BiLSTM": 0.024285714285714285,
+      "NGram-KL-Jaccard": 0.03,
+      "LA-LSTM-Attention": 0.024285714285714285,
+      "Integrated-DL": 0.012857142857142857,
+      "HDDN": 0.13142857142857142
+    },
+    "banjori": {
+      "n-CBDC": 0.0014285714285714286,
+      "MaldomDetector": 0.36857142857142855,
+      "ATT-CNN-BiLSTM": 0.002857142857142857,
+      "NGram-KL-Jaccard": 0.08714285714285715,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.017142857142857144,
+      "HDDN": 0.37142857142857144
+    },
+    "bedep": {
+      "n-CBDC": 0.007142857142857143,
+      "MaldomDetector": 0.06,
+      "ATT-CNN-BiLSTM": 0.005714285714285714,
+      "NGram-KL-Jaccard": 0.004285714285714286,
+      "LA-LSTM-Attention": 0.002857142857142857,
+      "Integrated-DL": 0.0014285714285714286,
+      "HDDN": 0.027142857142857142
+    },
+    "ccleaner": {
+      "n-CBDC": 0.004285714285714286,
+      "MaldomDetector": 0.002857142857142857,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.025714285714285714
+    },
+    "chinad": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.002857142857142857,
+      "ATT-CNN-BiLSTM": 0.0014285714285714286,
+      "NGram-KL-Jaccard": 0.0014285714285714286,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.004285714285714286
+    },
+    "corebot": {
+      "n-CBDC": 0.002857142857142857,
+      "MaldomDetector": 0.005714285714285714,
+      "ATT-CNN-BiLSTM": 0.002857142857142857,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.002857142857142857,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.008571428571428572
+    },
+    "cryptolocker": {
+      "n-CBDC": 0.004285714285714286,
+      "MaldomDetector": 0.11714285714285715,
+      "ATT-CNN-BiLSTM": 0.01,
+      "NGram-KL-Jaccard": 0.01,
+      "LA-LSTM-Attention": 0.008571428571428572,
+      "Integrated-DL": 0.011428571428571429,
+      "HDDN": 0.04
+    },
+    "dircrypt": {
+      "n-CBDC": 0.022857142857142857,
+      "MaldomDetector": 0.10285714285714286,
+      "ATT-CNN-BiLSTM": 0.012857142857142857,
+      "NGram-KL-Jaccard": 0.012857142857142857,
+      "LA-LSTM-Attention": 0.011428571428571429,
+      "Integrated-DL": 0.012857142857142857,
+      "HDDN": 0.07142857142857142
+    },
+    "dyre": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "fobber_v1": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.022857142857142857,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0014285714285714286,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.005714285714285714
+    },
+    "fobber_v2": {
+      "n-CBDC": 0.03142857142857143,
+      "MaldomDetector": 0.15,
+      "ATT-CNN-BiLSTM": 0.027142857142857142,
+      "NGram-KL-Jaccard": 0.014285714285714285,
+      "LA-LSTM-Attention": 0.015714285714285715,
+      "Integrated-DL": 0.015714285714285715,
+      "HDDN": 0.14857142857142858
+    },
+    "gozi_gpl": {
+      "n-CBDC": 0.07,
+      "MaldomDetector": 0.35428571428571426,
+      "ATT-CNN-BiLSTM": 0.10428571428571429,
+      "NGram-KL-Jaccard": 0.13,
+      "LA-LSTM-Attention": 0.09571428571428571,
+      "Integrated-DL": 0.1,
+      "HDDN": 0.5214285714285715
+    },
+    "gozi_luther": {
+      "n-CBDC": 0.08142857142857143,
+      "MaldomDetector": 0.37857142857142856,
+      "ATT-CNN-BiLSTM": 0.12142857142857143,
+      "NGram-KL-Jaccard": 0.2257142857142857,
+      "LA-LSTM-Attention": 0.11142857142857143,
+      "Integrated-DL": 0.13428571428571429,
+      "HDDN": 0.6314285714285715
+    },
+    "gozi_nasa": {
+      "n-CBDC": 0.09285714285714286,
+      "MaldomDetector": 0.36142857142857143,
+      "ATT-CNN-BiLSTM": 0.09714285714285714,
+      "NGram-KL-Jaccard": 0.18,
+      "LA-LSTM-Attention": 0.08142857142857143,
+      "Integrated-DL": 0.11285714285714285,
+      "HDDN": 0.5528571428571428
+    },
+    "gozi_rfc4343": {
+      "n-CBDC": 0.10285714285714286,
+      "MaldomDetector": 0.3314285714285714,
+      "ATT-CNN-BiLSTM": 0.12142857142857143,
+      "NGram-KL-Jaccard": 0.19285714285714287,
+      "LA-LSTM-Attention": 0.10428571428571429,
+      "Integrated-DL": 0.13142857142857142,
+      "HDDN": 0.5714285714285714
+    },
+    "kraken_v1": {
+      "n-CBDC": 0.10142857142857142,
+      "MaldomDetector": 0.2742857142857143,
+      "ATT-CNN-BiLSTM": 0.09714285714285714,
+      "NGram-KL-Jaccard": 0.11571428571428571,
+      "LA-LSTM-Attention": 0.08714285714285715,
+      "Integrated-DL": 0.08142857142857143,
+      "HDDN": 0.2985714285714286
+    },
+    "kraken_v2": {
+      "n-CBDC": 0.05285714285714286,
+      "MaldomDetector": 0.21571428571428572,
+      "ATT-CNN-BiLSTM": 0.04857142857142857,
+      "NGram-KL-Jaccard": 0.05714285714285714,
+      "LA-LSTM-Attention": 0.041428571428571426,
+      "Integrated-DL": 0.037142857142857144,
+      "HDDN": 0.18857142857142858
+    },
+    "locky": {
+      "n-CBDC": 0.041428571428571426,
+      "MaldomDetector": 0.1742857142857143,
+      "ATT-CNN-BiLSTM": 0.03571428571428571,
+      "NGram-KL-Jaccard": 0.032857142857142856,
+      "LA-LSTM-Attention": 0.04857142857142857,
+      "Integrated-DL": 0.037142857142857144,
+      "HDDN": 0.14285714285714285
+    },
+    "matsnu": {
+      "n-CBDC": 0.18142857142857144,
+      "MaldomDetector": 0.6285714285714286,
+      "ATT-CNN-BiLSTM": 0.1357142857142857,
+      "NGram-KL-Jaccard": 0.48428571428571426,
+      "LA-LSTM-Attention": 0.15857142857142856,
+      "Integrated-DL": 0.18142857142857144,
+      "HDDN": 0.9457142857142857
+    },
+    "murofet_v1": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.002857142857142857,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0014285714285714286,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "murofet_v2": {
+      "n-CBDC": 0.0014285714285714286,
+      "MaldomDetector": 0.041428571428571426,
+      "ATT-CNN-BiLSTM": 0.004285714285714286,
+      "NGram-KL-Jaccard": 0.002857142857142857,
+      "LA-LSTM-Attention": 0.002857142857142857,
+      "Integrated-DL": 0.0014285714285714286,
+      "HDDN": 0.008571428571428572
+    },
+    "murofet_v3": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "necurs": {
+      "n-CBDC": 0.037142857142857144,
+      "MaldomDetector": 0.14285714285714285,
+      "ATT-CNN-BiLSTM": 0.03142857142857143,
+      "NGram-KL-Jaccard": 0.032857142857142856,
+      "LA-LSTM-Attention": 0.025714285714285714,
+      "Integrated-DL": 0.03142857142857143,
+      "HDDN": 0.09714285714285714
+    },
+    "nymaim": {
+      "n-CBDC": 0.5642857142857143,
+      "MaldomDetector": 0.8914285714285715,
+      "ATT-CNN-BiLSTM": 0.48,
+      "NGram-KL-Jaccard": 0.7871428571428571,
+      "LA-LSTM-Attention": 0.44285714285714284,
+      "Integrated-DL": 0.5585714285714286,
+      "HDDN": 0.8928571428571429
+    },
+    "padcrypt": {
+      "n-CBDC": 0.002857142857142857,
+      "MaldomDetector": 0.04285714285714286,
+      "ATT-CNN-BiLSTM": 0.002857142857142857,
+      "NGram-KL-Jaccard": 0.005714285714285714,
+      "LA-LSTM-Attention": 0.007142857142857143,
+      "Integrated-DL": 0.005714285714285714,
+      "HDDN": 0.05857142857142857
+    },
+    "pizd": {
+      "n-CBDC": 0.08285714285714285,
+      "MaldomDetector": 0.9,
+      "ATT-CNN-BiLSTM": 0.06142857142857143,
+      "NGram-KL-Jaccard": 0.5385714285714286,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.045714285714285714,
+      "HDDN": 0.8642857142857143
+    },
+    "proslikefan": {
+      "n-CBDC": 0.13428571428571429,
+      "MaldomDetector": 0.30428571428571427,
+      "ATT-CNN-BiLSTM": 0.11714285714285715,
+      "NGram-KL-Jaccard": 0.12428571428571429,
+      "LA-LSTM-Attention": 0.12142857142857143,
+      "Integrated-DL": 0.10428571428571429,
+      "HDDN": 0.32
+    },
+    "pushdo": {
+      "n-CBDC": 0.03857142857142857,
+      "MaldomDetector": 0.7285714285714285,
+      "ATT-CNN-BiLSTM": 0.06142857142857143,
+      "NGram-KL-Jaccard": 0.12571428571428572,
+      "LA-LSTM-Attention": 0.05,
+      "Integrated-DL": 0.06571428571428571,
+      "HDDN": 0.4442857142857143
+    },
+    "pykspa": {
+      "n-CBDC": 0.08,
+      "MaldomDetector": 0.2814285714285714,
+      "ATT-CNN-BiLSTM": 0.08857142857142856,
+      "NGram-KL-Jaccard": 0.08857142857142856,
+      "LA-LSTM-Attention": 0.05714285714285714,
+      "Integrated-DL": 0.06857142857142857,
+      "HDDN": 0.2757142857142857
+    },
+    "pykspa_noise": {
+      "n-CBDC": 0.10428571428571429,
+      "MaldomDetector": 0.2785714285714286,
+      "ATT-CNN-BiLSTM": 0.09857142857142857,
+      "NGram-KL-Jaccard": 0.10142857142857142,
+      "LA-LSTM-Attention": 0.09,
+      "Integrated-DL": 0.08285714285714285,
+      "HDDN": 0.2857142857142857
+    },
+    "qadars": {
+      "n-CBDC": 0.002857142857142857,
+      "MaldomDetector": 0.011428571428571429,
+      "ATT-CNN-BiLSTM": 0.004285714285714286,
+      "NGram-KL-Jaccard": 0.002857142857142857,
+      "LA-LSTM-Attention": 0.002857142857142857,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.06571428571428571
+    },
+    "qakbot": {
+      "n-CBDC": 0.008571428571428572,
+      "MaldomDetector": 0.08428571428571428,
+      "ATT-CNN-BiLSTM": 0.017142857142857144,
+      "NGram-KL-Jaccard": 0.008571428571428572,
+      "LA-LSTM-Attention": 0.012857142857142857,
+      "Integrated-DL": 0.007142857142857143,
+      "HDDN": 0.06857142857142857
+    },
+    "ramdo": {
+      "n-CBDC": 0.002857142857142857,
+      "MaldomDetector": 0.12857142857142856,
+      "ATT-CNN-BiLSTM": 0.008571428571428572,
+      "NGram-KL-Jaccard": 0.005714285714285714,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.008571428571428572,
+      "HDDN": 0.05714285714285714
+    },
+    "ramnit": {
+      "n-CBDC": 0.017142857142857144,
+      "MaldomDetector": 0.12285714285714286,
+      "ATT-CNN-BiLSTM": 0.018571428571428572,
+      "NGram-KL-Jaccard": 0.018571428571428572,
+      "LA-LSTM-Attention": 0.025714285714285714,
+      "Integrated-DL": 0.017142857142857144,
+      "HDDN": 0.08142857142857143
+    },
+    "ranbyus_v1": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.1,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.004285714285714286,
+      "LA-LSTM-Attention": 0.004285714285714286,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.024285714285714285
+    },
+    "ranbyus_v2": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.03142857142857143,
+      "ATT-CNN-BiLSTM": 0.002857142857142857,
+      "NGram-KL-Jaccard": 0.004285714285714286,
+      "LA-LSTM-Attention": 0.004285714285714286,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.007142857142857143
+    },
+    "rovnix": {
+      "n-CBDC": 0.041428571428571426,
+      "MaldomDetector": 0.10428571428571429,
+      "ATT-CNN-BiLSTM": 0.05285714285714286,
+      "NGram-KL-Jaccard": 0.06714285714285714,
+      "LA-LSTM-Attention": 0.03857142857142857,
+      "Integrated-DL": 0.03857142857142857,
+      "HDDN": 0.45285714285714285
+    },
+    "shiotob": {
+      "n-CBDC": 0.017142857142857144,
+      "MaldomDetector": 0.04428571428571428,
+      "ATT-CNN-BiLSTM": 0.012857142857142857,
+      "NGram-KL-Jaccard": 0.007142857142857143,
+      "LA-LSTM-Attention": 0.008571428571428572,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.045714285714285714
+    },
+    "simda": {
+      "n-CBDC": 0.09285714285714286,
+      "MaldomDetector": 0.5928571428571429,
+      "ATT-CNN-BiLSTM": 0.11857142857142858,
+      "NGram-KL-Jaccard": 0.2742857142857143,
+      "LA-LSTM-Attention": 0.09571428571428571,
+      "Integrated-DL": 0.10428571428571429,
+      "HDDN": 0.55
+    },
+    "sisron": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.09285714285714286,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.06285714285714286
+    },
+    "suppobox_1": {
+      "n-CBDC": 0.07,
+      "MaldomDetector": 0.9171428571428571,
+      "ATT-CNN-BiLSTM": 0.05285714285714286,
+      "NGram-KL-Jaccard": 0.5214285714285715,
+      "LA-LSTM-Attention": 0.04,
+      "Integrated-DL": 0.08285714285714285,
+      "HDDN": 0.8071428571428572
+    },
+    "suppobox_2": {
+      "n-CBDC": 0.13428571428571429,
+      "MaldomDetector": 0.9557142857142857,
+      "ATT-CNN-BiLSTM": 0.05285714285714286,
+      "NGram-KL-Jaccard": 0.8642857142857143,
+      "LA-LSTM-Attention": 0.07285714285714286,
+      "Integrated-DL": 0.12428571428571429,
+      "HDDN": 0.9471428571428572
+    },
+    "suppobox_3": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.5157142857142857,
+      "ATT-CNN-BiLSTM": 0.004285714285714286,
+      "NGram-KL-Jaccard": 0.27285714285714285,
+      "LA-LSTM-Attention": 0.015714285714285715,
+      "Integrated-DL": 0.02,
+      "HDDN": 0.7485714285714286
+    },
+    "symmi": {
+      "n-CBDC": 0.19142857142857142,
+      "MaldomDetector": 0.7928571428571428,
+      "ATT-CNN-BiLSTM": 0.21571428571428572,
+      "NGram-KL-Jaccard": 0.24428571428571427,
+      "LA-LSTM-Attention": 0.18428571428571427,
+      "Integrated-DL": 0.24,
+      "HDDN": 0.5371428571428571
+    },
+    "tempedreve": {
+      "n-CBDC": 0.05285714285714286,
+      "MaldomDetector": 0.2814285714285714,
+      "ATT-CNN-BiLSTM": 0.05142857142857143,
+      "NGram-KL-Jaccard": 0.06142857142857143,
+      "LA-LSTM-Attention": 0.04428571428571428,
+      "Integrated-DL": 0.06571428571428571,
+      "HDDN": 0.24571428571428572
+    },
+    "tinba": {
+      "n-CBDC": 0.004285714285714286,
+      "MaldomDetector": 0.08,
+      "ATT-CNN-BiLSTM": 0.005714285714285714,
+      "NGram-KL-Jaccard": 0.005714285714285714,
+      "LA-LSTM-Attention": 0.005714285714285714,
+      "Integrated-DL": 0.005714285714285714,
+      "HDDN": 0.047142857142857146
+    },
+    "vawtrak_v1": {
+      "n-CBDC": 0.06428571428571428,
+      "MaldomDetector": 0.2642857142857143,
+      "ATT-CNN-BiLSTM": 0.07285714285714286,
+      "NGram-KL-Jaccard": 0.09857142857142857,
+      "LA-LSTM-Attention": 0.07714285714285714,
+      "Integrated-DL": 0.08142857142857143,
+      "HDDN": 0.24571428571428572
+    },
+    "vawtrak_v2": {
+      "n-CBDC": 0.02,
+      "MaldomDetector": 1.0,
+      "ATT-CNN-BiLSTM": 0.002857142857142857,
+      "NGram-KL-Jaccard": 0.20142857142857143,
+      "LA-LSTM-Attention": 0.008571428571428572,
+      "Integrated-DL": 0.01,
+      "HDDN": 0.7157142857142857
+    },
+    "vawtrak_v3": {
+      "n-CBDC": 0.05,
+      "MaldomDetector": 0.9814285714285714,
+      "ATT-CNN-BiLSTM": 0.01,
+      "NGram-KL-Jaccard": 0.37142857142857144,
+      "LA-LSTM-Attention": 0.015714285714285715,
+      "Integrated-DL": 0.012857142857142857,
+      "HDDN": 0.7528571428571429
+    },
+    "zeus-newgoz": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    }
+  },
+  "athena_mean_evasion": 0.9818489795918367
+}

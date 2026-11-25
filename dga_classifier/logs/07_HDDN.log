@@ -1,0 +1,13 @@
+train: 160000 labels (80000 DGA, 80000 legit)
+val: 20000 labels (10000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+  epoch 1: val loss 0.1948  (112s)
+  epoch 2: val loss 0.1685  (222s)
+  epoch 3: val loss 0.1726  (333s)
+  epoch 4: val loss 0.1663  (441s)
+  epoch 5: val loss 0.1872  (556s)
+  epoch 6: val loss 0.2300  (668s)
+  early stop
+
+[HDDN] test acc 0.9397  F1 0.9403  AUC 0.9852  FPR 0.0705  | charbot 0.344  word-concat 0.437
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\07_HDDN\results.json

@@ -1,0 +1,6 @@
+train: 160000 labels (80000 DGA, 80000 legit)
+val: 20000 labels (10000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+
+[MaldomDetector] test acc 0.8425  F1 0.8299  AUC 0.9144  FPR 0.0833  | charbot 0.295  word-concat 0.294
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\02_MaldomDetector\results.json

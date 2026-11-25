@@ -1,0 +1,15 @@
+held-out families (never trained on): suppobox_1, matsnu, gozi_nasa, nymaim, necurs, dyre, ramnit, locky, pykspa, banjori
+train: 144000 labels (64000 DGA, 80000 legit)
+val: 18000 labels (8000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+C:\Users\WAQAR COMPUTER\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py:380: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\Convolution.cpp:1136.)
+  return F.conv1d(
+  epoch 1: val loss 0.2167  (133s)
+  epoch 2: val loss 0.1944  (263s)
+  epoch 3: val loss 0.1744  (390s)
+  epoch 4: val loss 0.1646  (530s)
+  epoch 5: val loss 0.1555  (689s)
+  epoch 6: val loss 0.1734  (839s)
+
+[Integrated-DL] test acc 0.9155  F1 0.9126  AUC 0.9604  FPR 0.0512  | charbot 0.652  word-concat 0.397
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\06_Integrated-DL\results_holdout.json

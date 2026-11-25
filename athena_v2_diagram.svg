@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker>
+    <marker id="p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7c3aed"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2563eb"/></marker>
+    <marker id="t" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0d9488"/></marker>
+  </defs>
+  <rect width="900" height="780" fill="#ffffff"/>
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="600" fill="#0f172a">Athena v2: dilated gated graph with a prefix node</text>
+
+  <!-- top row -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="30" y="56" width="250" height="56" rx="8" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="155" y="80" font-weight="600" fill="#0c4a6e">Labels → tokens (encoded once)</text>
+    <text x="155" y="98" fill="#0c4a6e">^ a b c d … $ as a fixed tensor</text>
+
+    <rect x="330" y="56" width="250" height="56" rx="8" fill="#fef3c7" stroke="#d97706"/>
+    <text x="455" y="80" font-weight="600" fill="#78350f">Prefix node (new)</text>
+    <text x="455" y="98" fill="#78350f">embedding of "abc", global context</text>
+
+    <rect x="630" y="56" width="240" height="56" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="750" y="80" font-weight="600" fill="#0f172a">AdamW + LR schedule</text>
+    <text x="750" y="98" fill="#334155">early stop on validation loss</text>
+  </g>
+  <path d="M455 112V140" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" fill="none" marker-end="url(#g)"/>
+  <text x="465" y="134" font-size="11" fill="#78350f">added to every node, every layer</text>
+
+  <!-- stack -->
+  <rect x="30" y="148" width="840" height="448" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g font-size="12" fill="#475569">
+    <text x="44" y="206">tokens</text>
+    <text x="44" y="270">embedding</text>
+    <text x="44" y="350">layer 1</text>
+    <text x="44" y="372" fill="#7c3aed">dilation 1</text>
+    <text x="44" y="430">layer 2</text>
+    <text x="44" y="452" fill="#2563eb">dilation 2</text>
+    <text x="44" y="510">layer 3</text>
+    <text x="44" y="532" fill="#0d9488">dilation 4</text>
+  </g>
+
+  <!-- token row -->
+  <g fill="#fef3c7" stroke="#d97706">
+    <rect x="180" y="186" width="70" height="30" rx="6"/><rect x="320" y="186" width="70" height="30" rx="6"/><rect x="460" y="186" width="70" height="30" rx="6"/><rect x="600" y="186" width="70" height="30" rx="6"/><rect x="740" y="186" width="70" height="30" rx="6"/>
+  </g>
+  <g font-size="13" font-weight="600" fill="#78350f" text-anchor="middle">
+    <text x="215" y="206">^</text><text x="355" y="206">a</text><text x="495" y="206">b</text><text x="635" y="206">c</text><text x="775" y="206">d</text>
+  </g>
+  <path d="M215 216V250M355 216V250M495 216V250M635 216V250M775 216V250" stroke="#475569" stroke-width="1.4" fill="none" marker-end="url(#g)"/>
+
+  <!-- node rows -->
+  <g fill="#dcfce7" stroke="#16a34a">
+    <rect x="180" y="250" width="70" height="32" rx="16"/><rect x="320" y="250" width="70" height="32" rx="16"/><rect x="460" y="250" width="70" height="32" rx="16"/><rect x="600" y="250" width="70" height="32" rx="16"/><rect x="740" y="250" width="70" height="32" rx="16"/>
+  </g>
+  <g fill="#ede9fe" stroke="#7c3aed">
+    <rect x="180" y="330" width="70" height="32" rx="16"/><rect x="320" y="330" width="70" height="32" rx="16"/><rect x="460" y="330" width="70" height="32" rx="16"/><rect x="600" y="330" width="70" height="32" rx="16"/><rect x="740" y="330" width="70" height="32" rx="16"/>
+  </g>
+  <g fill="#dbeafe" stroke="#2563eb">
+    <rect x="180" y="410" width="70" height="32" rx="16"/><rect x="320" y="410" width="70" height="32" rx="16"/><rect x="460" y="410" width="70" height="32" rx="16"/><rect x="600" y="410" width="70" height="32" rx="16"/><rect x="740" y="410" width="70" height="32" rx="16"/>
+  </g>
+  <g fill="#ccfbf1" stroke="#0d9488">
+    <rect x="180" y="490" width="70" height="32" rx="16"/><rect x="320" y="490" width="70" height="32" rx="16"/><rect x="460" y="490" width="70" height="32" rx="16"/><rect x="600" y="490" width="70" height="32" rx="16"/><rect x="740" y="490" width="70" height="32" rx="16"/>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#14532d">
+    <text x="215" y="271">h₀</text><text x="355" y="271">h₁</text><text x="495" y="271">h₂</text><text x="635" y="271">h₃</text><text x="775" y="271">h₄</text>
+  </g>
+  <g font-size="11" text-anchor="middle">
+    <g fill="#4c1d95"><text x="215" y="351">gate</text><text x="355" y="351">gate</text><text x="495" y="351">gate</text><text x="635" y="351">gate</text><text x="775" y="351">gate</text></g>
+    <g fill="#1e3a8a"><text x="215" y="431">gate</text><text x="355" y="431">gate</text><text x="495" y="431">gate</text><text x="635" y="431">gate</text><text x="775" y="431">gate</text></g>
+    <g fill="#134e4a"><text x="215" y="511">gate</text><text x="355" y="511">gate</text><text x="495" y="511">gate</text><text x="635" y="511">gate</text><text x="775" y="511">gate</text></g>
+  </g>
+
+  <!-- residual (same node) edges -->
+  <g stroke="#94a3b8" stroke-width="1.3" fill="none" marker-end="url(#g)">
+    <path d="M215 282V330M355 282V330M495 282V330M635 282V330M775 282V330"/>
+    <path d="M215 362V410M355 362V410M495 362V410M635 362V410M775 362V410"/>
+    <path d="M215 442V490M355 442V490M495 442V490M635 442V490M775 442V490"/>
+  </g>
+  <!-- layer 1: from i-1 -->
+  <g stroke="#7c3aed" stroke-width="1.6" fill="none" marker-end="url(#p)">
+    <path d="M250 274L322 334M390 274L462 334M530 274L602 334M670 274L742 334"/>
+  </g>
+  <!-- layer 2: from i-2 -->
+  <g stroke="#2563eb" stroke-width="1.6" fill="none" marker-end="url(#b)">
+    <path d="M225 362C225 392 475 380 480 410"/>
+    <path d="M365 362C365 392 615 380 620 410"/>
+    <path d="M505 362C505 392 755 380 760 410"/>
+  </g>
+  <!-- layer 3: from i-4 -->
+  <g stroke="#0d9488" stroke-width="1.6" fill="none" marker-end="url(#t)">
+    <path d="M215 442C215 474 700 456 760 490"/>
+  </g>
+  <text x="560" y="469" font-size="11" fill="#0d9488">only h₄ reaches ^ in this 5-node example</text>
+
+  <!-- cell detail -->
+  <rect x="150" y="548" width="660" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <g font-size="12" text-anchor="middle" fill="#334155">
+    <text x="480" y="564">Inside a layer:  m = [ hᵢ , hᵢ₋d , prefix ]   →   Linear → sigmoid gate × tanh update</text>
+    <text x="480" y="580">hᵢ ← LayerNorm( hᵢ + gate × update )     last node sees 8 positions with only 3 layers (v1: 4)</text>
+  </g>
+
+  <!-- bottom row -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="30" y="634" width="200" height="76" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="130" y="660" font-weight="600" fill="#7f1d1d">Readout + loss</text>
+    <text x="130" y="680" fill="#7f1d1d">next-char scores,</text>
+    <text x="130" y="696" fill="#7f1d1d">cross-entropy</text>
+
+    <rect x="260" y="634" width="200" height="76" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="360" y="660" font-weight="600" fill="#7f1d1d">Cached generation</text>
+    <text x="360" y="680" fill="#7f1d1d">keep per-layer states;</text>
+    <text x="360" y="696" fill="#7f1d1d">each new char = 1 new column</text>
+
+    <rect x="490" y="634" width="200" height="76" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="590" y="660" font-weight="600" fill="#7f1d1d">Sample</text>
+    <text x="590" y="680" fill="#7f1d1d">top-k + temperature,</text>
+    <text x="590" y="696" fill="#7f1d1d">prefix forced</text>
+
+    <rect x="720" y="634" width="150" height="76" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="795" y="656" font-weight="600" fill="#14532d">Lookalike filter</text>
+    <text x="795" y="674" fill="#14532d">drop known, duplicate,</text>
+    <text x="795" y="690" fill="#14532d">edit distance ≤ 2</text>
+    <text x="795" y="704" fill="#14532d">→ name.test CSV</text>
+  </g>
+  <path d="M230 672H260M460 672H490M690 672H720" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#g)"/>
+  <path d="M130 596V634" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#g)"/>
+  <text x="450" y="742" text-anchor="middle" font-size="12" fill="#475569">Gray = residual path, colored = message from an earlier position (distance 1, 2, 4), dashed amber = prefix broadcast.</text>
+  <text x="450" y="762" text-anchor="middle" font-size="12" fill="#475569">Planned design: not built or benchmarked yet.</text>
+</svg>

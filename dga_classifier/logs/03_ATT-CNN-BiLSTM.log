@@ -1,0 +1,12 @@
+train: 160000 labels (80000 DGA, 80000 legit)
+val: 20000 labels (10000 DGA, 10000 legit)
+test: 20000 labels (10000 DGA, 10000 legit)
+  epoch 1: val loss 0.2706  (148s)
+  epoch 2: val loss 0.2110  (299s)
+  epoch 3: val loss 0.1780  (450s)
+  epoch 4: val loss 0.1694  (604s)
+  epoch 5: val loss 0.1674  (744s)
+  epoch 6: val loss 0.1594  (862s)
+
+[ATT-CNN-BiLSTM] test acc 0.9385  F1 0.9377  AUC 0.9852  FPR 0.0483  | charbot 0.258  word-concat 0.375
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\03_ATT-CNN-BiLSTM\results.json

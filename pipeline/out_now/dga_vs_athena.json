@@ -1,0 +1,621 @@
+{
+  "summary": [
+    {
+      "model": "n-CBDC",
+      "quick": false,
+      "dga_evasion": 0.048,
+      "athena_evasion": 1.0,
+      "dga_mean": 0.9367045098311646,
+      "athena_mean": 0.017928
+    },
+    {
+      "model": "MaldomDetector",
+      "quick": false,
+      "dga_evasion": 0.2872,
+      "athena_evasion": 0.97,
+      "dga_mean": 0.7455387621235745,
+      "athena_mean": 0.23948099999999997
+    },
+    {
+      "model": "ATT-CNN-BiLSTM",
+      "quick": false,
+      "dga_evasion": 0.0516,
+      "athena_evasion": 0.99,
+      "dga_mean": 0.9302600442204159,
+      "athena_mean": 0.025761000000000003
+    },
+    {
+      "model": "NGram-KL-Jaccard",
+      "quick": false,
+      "dga_evasion": 0.1282,
+      "athena_evasion": 0.99,
+      "dga_mean": 0.8555302101483557,
+      "athena_mean": 0.103713
+    },
+    {
+      "model": "LA-LSTM-Attention",
+      "quick": false,
+      "dga_evasion": 0.0474,
+      "athena_evasion": 1.0,
+      "dga_mean": 0.9350241713955998,
+      "athena_mean": 0.026754999999999994
+    },
+    {
+      "model": "Integrated-DL",
+      "quick": true,
+      "dga_evasion": 0.183,
+      "athena_evasion": 0.87,
+      "dga_mean": 0.7825759733617306,
+      "athena_mean": 0.299909
+    },
+    {
+      "model": "HDDN",
+      "quick": true,
+      "dga_evasion": 0.2866,
+      "athena_evasion": 0.99,
+      "dga_mean": 0.6988419062942266,
+      "athena_mean": 0.20967199999999997
+    },
+    {
+      "model": "Majority vote",
+      "quick": false,
+      "dga_evasion": 0.10719999999999996,
+      "athena_evasion": 1.0,
+      "dga_mean": null,
+      "athena_mean": null
+    }
+  ],
+  "detection_validation": [
+    {
+      "model": "n-CBDC",
+      "quick": false,
+      "det_dga": 0.952,
+      "det_athena": 0.0,
+      "fpr_legit": 0.03,
+      "auc_dga_vs_legit": 0.9914000000000001,
+      "auc_athena_vs_legit": 0.38005,
+      "full_recall": 0.94692,
+      "full_precision": 0.9677261113949923,
+      "full_f1": 0.9572100075815012,
+      "full_auc": 0.9918650563,
+      "full_fpr": 0.03158
+    },
+    {
+      "model": "MaldomDetector",
+      "quick": false,
+      "det_dga": 0.7128,
+      "det_athena": 0.03,
+      "fpr_legit": 0.09,
+      "auc_dga_vs_legit": 0.8792250000000001,
+      "auc_athena_vs_legit": 0.47625,
+      "full_recall": 0.71138,
+      "full_precision": 0.8824959682421536,
+      "full_f1": 0.7877526161342118,
+      "full_auc": 0.8894062258500002,
+      "full_fpr": 0.09472
+    },
+    {
+      "model": "ATT-CNN-BiLSTM",
+      "quick": false,
+      "det_dga": 0.9484,
+      "det_athena": 0.01,
+      "fpr_legit": 0.04,
+      "auc_dga_vs_legit": 0.991666,
+      "auc_athena_vs_legit": 0.40915000000000007,
+      "full_recall": 0.94903,
+      "full_precision": 0.9639226042354375,
+      "full_f1": 0.9564183316117004,
+      "full_auc": 0.9914171882999999,
+      "full_fpr": 0.03552
+    },
+    {
+      "model": "NGram-KL-Jaccard",
+      "quick": false,
+      "det_dga": 0.8718,
+      "det_athena": 0.01,
+      "fpr_legit": 0.1,
+      "auc_dga_vs_legit": 0.9573699999999999,
+      "auc_athena_vs_legit": 0.43389999999999995,
+      "full_recall": 0.87015,
+      "full_precision": 0.9325866780987085,
+      "full_f1": 0.9002871110421354,
+      "full_auc": 0.96522109745,
+      "full_fpr": 0.0629
+    },
+    {
+      "model": "LA-LSTM-Attention",
+      "quick": false,
+      "det_dga": 0.9526,
+      "det_athena": 0.0,
+      "fpr_legit": 0.03,
+      "auc_dga_vs_legit": 0.99265,
+      "auc_athena_vs_legit": 0.40165,
+      "full_recall": 0.95184,
+      "full_precision": 0.9521923111551274,
+      "full_f1": 0.9520161229827518,
+      "full_auc": 0.9899593722000001,
+      "full_fpr": 0.04779
+    },
+    {
+      "model": "Integrated-DL",
+      "quick": true,
+      "det_dga": 0.817,
+      "det_athena": 0.13,
+      "fpr_legit": 0.36,
+      "auc_dga_vs_legit": 0.84304,
+      "auc_athena_vs_legit": 0.3399500000000001,
+      "full_recall": 0.8146406984553392,
+      "full_precision": 0.7640944881889764,
+      "full_f1": 0.7885584267836827,
+      "full_auc": 0.8764044644178643,
+      "full_fpr": 0.24784910655195236
+    },
+    {
+      "model": "HDDN",
+      "quick": true,
+      "det_dga": 0.7134,
+      "det_athena": 0.01,
+      "fpr_legit": 0.15,
+      "auc_dga_vs_legit": 0.862252,
+      "auc_athena_vs_legit": 0.28395000000000004,
+      "full_recall": 0.7004701141705842,
+      "full_precision": 0.8764705882352941,
+      "full_f1": 0.7786487495334079,
+      "full_auc": 0.8858462499538864,
+      "full_fpr": 0.09728656518861681
+    }
+  ],
+  "family_evasion": {
+    "alureon": {
+      "n-CBDC": 0.03,
+      "MaldomDetector": 0.13,
+      "ATT-CNN-BiLSTM": 0.03,
+      "NGram-KL-Jaccard": 0.03,
+      "LA-LSTM-Attention": 0.02,
+      "Integrated-DL": 0.04,
+      "HDDN": 0.13
+    },
+    "banjori": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.3,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.02,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.13,
+      "HDDN": 0.31
+    },
+    "bedep": {
+      "n-CBDC": 0.02,
+      "MaldomDetector": 0.12,
+      "ATT-CNN-BiLSTM": 0.03,
+      "NGram-KL-Jaccard": 0.03,
+      "LA-LSTM-Attention": 0.03,
+      "Integrated-DL": 0.02,
+      "HDDN": 0.02
+    },
+    "ccleaner": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.01
+    },
+    "chinad": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "corebot": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "cryptolocker": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.12,
+      "ATT-CNN-BiLSTM": 0.02,
+      "NGram-KL-Jaccard": 0.02,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.01,
+      "HDDN": 0.03
+    },
+    "dircrypt": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.08,
+      "ATT-CNN-BiLSTM": 0.01,
+      "NGram-KL-Jaccard": 0.01,
+      "LA-LSTM-Attention": 0.03,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.08
+    },
+    "dyre": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "fobber_v1": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.02,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.01,
+      "HDDN": 0.01
+    },
+    "fobber_v2": {
+      "n-CBDC": 0.06,
+      "MaldomDetector": 0.16,
+      "ATT-CNN-BiLSTM": 0.05,
+      "NGram-KL-Jaccard": 0.02,
+      "LA-LSTM-Attention": 0.06,
+      "Integrated-DL": 0.05,
+      "HDDN": 0.2
+    },
+    "gozi_gpl": {
+      "n-CBDC": 0.06,
+      "MaldomDetector": 0.36,
+      "ATT-CNN-BiLSTM": 0.09,
+      "NGram-KL-Jaccard": 0.2,
+      "LA-LSTM-Attention": 0.09,
+      "Integrated-DL": 0.33,
+      "HDDN": 0.53
+    },
+    "gozi_luther": {
+      "n-CBDC": 0.08,
+      "MaldomDetector": 0.43,
+      "ATT-CNN-BiLSTM": 0.12,
+      "NGram-KL-Jaccard": 0.23,
+      "LA-LSTM-Attention": 0.11,
+      "Integrated-DL": 0.6,
+      "HDDN": 0.67
+    },
+    "gozi_nasa": {
+      "n-CBDC": 0.08,
+      "MaldomDetector": 0.32,
+      "ATT-CNN-BiLSTM": 0.1,
+      "NGram-KL-Jaccard": 0.2,
+      "LA-LSTM-Attention": 0.06,
+      "Integrated-DL": 0.5,
+      "HDDN": 0.57
+    },
+    "gozi_rfc4343": {
+      "n-CBDC": 0.13,
+      "MaldomDetector": 0.46,
+      "ATT-CNN-BiLSTM": 0.15,
+      "NGram-KL-Jaccard": 0.3,
+      "LA-LSTM-Attention": 0.16,
+      "Integrated-DL": 0.47,
+      "HDDN": 0.62
+    },
+    "kraken_v1": {
+      "n-CBDC": 0.06,
+      "MaldomDetector": 0.22,
+      "ATT-CNN-BiLSTM": 0.13,
+      "NGram-KL-Jaccard": 0.15,
+      "LA-LSTM-Attention": 0.11,
+      "Integrated-DL": 0.15,
+      "HDDN": 0.29
+    },
+    "kraken_v2": {
+      "n-CBDC": 0.09,
+      "MaldomDetector": 0.2,
+      "ATT-CNN-BiLSTM": 0.1,
+      "NGram-KL-Jaccard": 0.06,
+      "LA-LSTM-Attention": 0.08,
+      "Integrated-DL": 0.05,
+      "HDDN": 0.17
+    },
+    "locky": {
+      "n-CBDC": 0.02,
+      "MaldomDetector": 0.12,
+      "ATT-CNN-BiLSTM": 0.01,
+      "NGram-KL-Jaccard": 0.03,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.02,
+      "HDDN": 0.09
+    },
+    "matsnu": {
+      "n-CBDC": 0.18,
+      "MaldomDetector": 0.63,
+      "ATT-CNN-BiLSTM": 0.1,
+      "NGram-KL-Jaccard": 0.48,
+      "LA-LSTM-Attention": 0.12,
+      "Integrated-DL": 0.82,
+      "HDDN": 0.9
+    },
+    "murofet_v1": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "murofet_v2": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.02,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.01
+    },
+    "murofet_v3": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "necurs": {
+      "n-CBDC": 0.04,
+      "MaldomDetector": 0.16,
+      "ATT-CNN-BiLSTM": 0.04,
+      "NGram-KL-Jaccard": 0.04,
+      "LA-LSTM-Attention": 0.05,
+      "Integrated-DL": 0.01,
+      "HDDN": 0.1
+    },
+    "nymaim": {
+      "n-CBDC": 0.45,
+      "MaldomDetector": 0.96,
+      "ATT-CNN-BiLSTM": 0.45,
+      "NGram-KL-Jaccard": 0.76,
+      "LA-LSTM-Attention": 0.37,
+      "Integrated-DL": 0.79,
+      "HDDN": 0.89
+    },
+    "padcrypt": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.08,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.02,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.04,
+      "HDDN": 0.08
+    },
+    "pizd": {
+      "n-CBDC": 0.05,
+      "MaldomDetector": 0.91,
+      "ATT-CNN-BiLSTM": 0.04,
+      "NGram-KL-Jaccard": 0.53,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.65,
+      "HDDN": 0.85
+    },
+    "proslikefan": {
+      "n-CBDC": 0.15,
+      "MaldomDetector": 0.34,
+      "ATT-CNN-BiLSTM": 0.17,
+      "NGram-KL-Jaccard": 0.14,
+      "LA-LSTM-Attention": 0.15,
+      "Integrated-DL": 0.17,
+      "HDDN": 0.42
+    },
+    "pushdo": {
+      "n-CBDC": 0.05,
+      "MaldomDetector": 0.75,
+      "ATT-CNN-BiLSTM": 0.12,
+      "NGram-KL-Jaccard": 0.16,
+      "LA-LSTM-Attention": 0.11,
+      "Integrated-DL": 0.3,
+      "HDDN": 0.42
+    },
+    "pykspa": {
+      "n-CBDC": 0.08,
+      "MaldomDetector": 0.29,
+      "ATT-CNN-BiLSTM": 0.08,
+      "NGram-KL-Jaccard": 0.09,
+      "LA-LSTM-Attention": 0.12,
+      "Integrated-DL": 0.1,
+      "HDDN": 0.23
+    },
+    "pykspa_noise": {
+      "n-CBDC": 0.09,
+      "MaldomDetector": 0.27,
+      "ATT-CNN-BiLSTM": 0.09,
+      "NGram-KL-Jaccard": 0.08,
+      "LA-LSTM-Attention": 0.1,
+      "Integrated-DL": 0.07,
+      "HDDN": 0.29
+    },
+    "qadars": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.02,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.03,
+      "HDDN": 0.07
+    },
+    "qakbot": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.05,
+      "ATT-CNN-BiLSTM": 0.01,
+      "NGram-KL-Jaccard": 0.01,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.01,
+      "HDDN": 0.05
+    },
+    "ramdo": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.11,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.05,
+      "HDDN": 0.05
+    },
+    "ramnit": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.11,
+      "ATT-CNN-BiLSTM": 0.04,
+      "NGram-KL-Jaccard": 0.03,
+      "LA-LSTM-Attention": 0.02,
+      "Integrated-DL": 0.02,
+      "HDDN": 0.08
+    },
+    "ranbyus_v1": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.11,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.01,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.01
+    },
+    "ranbyus_v2": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.02,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    },
+    "rovnix": {
+      "n-CBDC": 0.05,
+      "MaldomDetector": 0.06,
+      "ATT-CNN-BiLSTM": 0.07,
+      "NGram-KL-Jaccard": 0.07,
+      "LA-LSTM-Attention": 0.05,
+      "Integrated-DL": 0.29,
+      "HDDN": 0.48
+    },
+    "shiotob": {
+      "n-CBDC": 0.02,
+      "MaldomDetector": 0.05,
+      "ATT-CNN-BiLSTM": 0.02,
+      "NGram-KL-Jaccard": 0.01,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.02,
+      "HDDN": 0.04
+    },
+    "simda": {
+      "n-CBDC": 0.04,
+      "MaldomDetector": 0.52,
+      "ATT-CNN-BiLSTM": 0.06,
+      "NGram-KL-Jaccard": 0.27,
+      "LA-LSTM-Attention": 0.05,
+      "Integrated-DL": 0.25,
+      "HDDN": 0.53
+    },
+    "sisron": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.08,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.09
+    },
+    "suppobox_1": {
+      "n-CBDC": 0.06,
+      "MaldomDetector": 0.93,
+      "ATT-CNN-BiLSTM": 0.04,
+      "NGram-KL-Jaccard": 0.4,
+      "LA-LSTM-Attention": 0.04,
+      "Integrated-DL": 0.56,
+      "HDDN": 0.78
+    },
+    "suppobox_2": {
+      "n-CBDC": 0.13,
+      "MaldomDetector": 0.94,
+      "ATT-CNN-BiLSTM": 0.04,
+      "NGram-KL-Jaccard": 0.86,
+      "LA-LSTM-Attention": 0.05,
+      "Integrated-DL": 0.73,
+      "HDDN": 0.98
+    },
+    "suppobox_3": {
+      "n-CBDC": 0.02,
+      "MaldomDetector": 0.49,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.24,
+      "LA-LSTM-Attention": 0.02,
+      "Integrated-DL": 0.58,
+      "HDDN": 0.76
+    },
+    "symmi": {
+      "n-CBDC": 0.13,
+      "MaldomDetector": 0.75,
+      "ATT-CNN-BiLSTM": 0.19,
+      "NGram-KL-Jaccard": 0.2,
+      "LA-LSTM-Attention": 0.16,
+      "Integrated-DL": 0.35,
+      "HDDN": 0.52
+    },
+    "tempedreve": {
+      "n-CBDC": 0.07,
+      "MaldomDetector": 0.32,
+      "ATT-CNN-BiLSTM": 0.08,
+      "NGram-KL-Jaccard": 0.11,
+      "LA-LSTM-Attention": 0.08,
+      "Integrated-DL": 0.11,
+      "HDDN": 0.24
+    },
+    "tinba": {
+      "n-CBDC": 0.01,
+      "MaldomDetector": 0.07,
+      "ATT-CNN-BiLSTM": 0.01,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.02,
+      "HDDN": 0.05
+    },
+    "vawtrak_v1": {
+      "n-CBDC": 0.04,
+      "MaldomDetector": 0.32,
+      "ATT-CNN-BiLSTM": 0.04,
+      "NGram-KL-Jaccard": 0.09,
+      "LA-LSTM-Attention": 0.03,
+      "Integrated-DL": 0.06,
+      "HDDN": 0.32
+    },
+    "vawtrak_v2": {
+      "n-CBDC": 0.04,
+      "MaldomDetector": 1.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.2,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.26,
+      "HDDN": 0.63
+    },
+    "vawtrak_v3": {
+      "n-CBDC": 0.02,
+      "MaldomDetector": 0.98,
+      "ATT-CNN-BiLSTM": 0.03,
+      "NGram-KL-Jaccard": 0.31,
+      "LA-LSTM-Attention": 0.01,
+      "Integrated-DL": 0.48,
+      "HDDN": 0.73
+    },
+    "zeus-newgoz": {
+      "n-CBDC": 0.0,
+      "MaldomDetector": 0.0,
+      "ATT-CNN-BiLSTM": 0.0,
+      "NGram-KL-Jaccard": 0.0,
+      "LA-LSTM-Attention": 0.0,
+      "Integrated-DL": 0.0,
+      "HDDN": 0.0
+    }
+  },
+  "athena_mean_evasion": 0.972857142857143
+}

@@ -1,0 +1,24 @@
+﻿Training: 132696, validation: 16587, test: 16587
+Epoch 1: validation loss 2.292
+Epoch 2: validation loss 2.235
+Epoch 3: validation loss 2.206
+Epoch 4: validation loss 2.191
+Epoch 5: validation loss 2.182
+Epoch 6: validation loss 2.174
+Epoch 7: validation loss 2.170
+Epoch 8: validation loss 2.167
+Epoch 9: validation loss 2.161
+Epoch 10: validation loss 2.158
+Held-out loss per token: 2.166251124099769
+Trainable parameters: 108711
+Saved 20 of 20 requested names to C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\athena_synthetic.csv
+abcodesk.test
+abcasino.test
+abcgj.test
+abcodesigns.test
+abcollegison.test
+abcaststers.test
+abcgnodo.test
+abcolar.test
+abcampostar.test
+abcgate.test

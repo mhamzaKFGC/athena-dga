@@ -1,0 +1,11 @@
+FULL mode: 50 families, 12000 per family per epoch (+ same number of legit), 4 epochs
+train: 1000000 labels (500000 DGA, 500000 legit)
+val: 50000 labels (25000 DGA, 25000 legit)
+test: 200000 labels (100000 DGA, 100000 legit)
+  epoch 1: val loss 0.1302  (1197s)
+  epoch 2: val loss 0.1064  (2987s)
+  epoch 3: val loss 0.0980  (4212s)
+  epoch 4: val loss 0.0919  (5527s)
+
+[HDDN] test acc 0.9663  F1 0.9661  AUC 0.9948  FPR 0.0273  | charbot 0.211  word-concat 0.239
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\07_HDDN\results.json

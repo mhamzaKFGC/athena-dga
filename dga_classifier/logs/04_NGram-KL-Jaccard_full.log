@@ -1,0 +1,8 @@
+FULL mode: 50 families, 12000 per family per epoch (+ same number of legit), 4 epochs
+train: 1000000 labels (500000 DGA, 500000 legit)
+val: 50000 labels (25000 DGA, 25000 legit)
+test: 200000 labels (100000 DGA, 100000 legit)
+features for 500000 training rows in 107s
+
+[NGram-KL-Jaccard] test acc 0.9036  F1 0.9003  AUC 0.9652  FPR 0.0629  | charbot 0.263  word-concat 0.278
+saved C:\Users\WAQAR COMPUTER\Desktop\AthenaExp\dga_classifier\04_NGram-KL-Jaccard\results.json
